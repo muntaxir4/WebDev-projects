@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+h2{
+    margin: 0px;
+}
+.notecreate,.noteedit{
+    height: 100%;
+    display: none;
+    justify-content: center;
+
+}
+.newnote,.editnote{
+    width: 40%;
+    height: min(370px,65%);
+    position: fixed;
+    top: 20%;    
+    border-radius: 10px;
+    border: 2px solid;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    overflow-y: auto;
+}
+.allnotes{
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.note-card{
+    min-width: 180px;
+    min-height: 200px;
+    padding: 0px 20px 20px 5px;
+
+}
+form input,textarea{
+    background: none;
+}
+form{
+    position: relative;
+}
+
+.options{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.btn{
+    margin-bottom: 5px;
+}
+
+
+/* bootstrap-custom */
+.form-control{
+    display: inline-block;
+    background: none;
+}

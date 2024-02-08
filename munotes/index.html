@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munotes</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="py-3 mb-3 border-bottom">
+        <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+          
+          <h2 style="font-size: large;">munotes</h2>
+          <div class="d-flex align-items-center justify-content-end">
+            <button type="button" style="border: none; padding: none; margin-right: 6px; background:none;" onclick="toggleAddNote();"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+            </svg></button>
+            
+            <div class="flex-shrink-0 dropdown">
+              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/muntaxir4.png" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+              <ul class="dropdown-menu text-small shadow">
+                <li><a class="dropdown-item" onclick="toggleAddNote();">New Note</a></li>
+                <li><a class="dropdown-item" onclick="allNotesDel();">Delete All Notes</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item theme" onclick="chTheme()">Dark Mode</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container-fluid pb-3">
+        <div class="d-flex gap-3 allnotes">
+          
+          
+        </div>
+      </div>
+      <div class="bg-body-tertiary border rounded-3 note-card" onclick="noteClick(this);" style="display: none;">
+        <br>
+        <h5>Title</h5>
+          <hr>
+          <p>Something in the way </p>
+      </div>
+    <div class="notecreate" >
+        <div class="newnote">
+            <form action="javascript:void(0);" onsubmit="saveNote(this);">
+                <input type="text" name="title" class="form-control" placeholder="Title" style="width: 100%;">
+                <textarea name="body" class="form-control" rows="10" style="width: 100%;" placeholder="Write Something"></textarea>
+                <br>
+                <div class="options">
+                  <input type="submit" class="btn btn-outline-success" value="SAVE">
+                  <input type="button" class="btn btn-outline-secondary" value="CANCEL" onclick="toggleAddNote(this.parentElement.parentElement);">
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    <div class="noteedit" >
+      <div class="editnote">
+          <form action="javascript:void(0);" onsubmit="saveNote(this);toggleEditNote();">
+              <input type="text" name="title" class="form-control" placeholder="Title" style="width: 100%;">
+              <textarea name="body" class="form-control" rows="10" style="width: 100%;" placeholder="Write Something"></textarea>
+              <br>
+              <div class="options">
+                <input type="submit" class="btn btn-outline-success" value="SAVE">
+                <input type="button" class="btn btn-outline-warning"  value="DELETE" onclick="noteDel(this.parentElement.parentElement);">
+                <input type="button" class="btn btn-outline-secondary"  value="CANCEL" onclick="toggleEditNote()">
+              </div>
+              
+          </form>
+      </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
