@@ -2,4 +2,4 @@
 
 ### Apps
 - <a href="./munotes/">Munotes</a>, LocalStorage Based Notes App.
-- <a href="./useraccount-session/README.md">UserAccount</a>, Session-Based-Authentication.
+- <a href="./useraccount-session">UserAccount</a>, Session-Based-Authentication.
