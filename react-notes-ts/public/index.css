@@ -10,73 +10,57 @@ body {
   background: #eee;
   padding: 0 16px;
 }
-
+button.btn.btn-outline-danger {
+  float: inline-end; 
+}
 header {
-  background-color: #f5ba13;
+  /* background-color: #f5ba13; */
   margin: auto -16px;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-  color: #fff;
+  /* color: #fff; */
   font-family: "McLaren", cursive;
   font-weight: 200;
+  display: inline-block;
 }
-
+header button {
+  float: right;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  margin: auto 0;
+}
 footer {
-  position: absolute;
+  /* position: absolute; */
   text-align: center;
   bottom: 0;
-  width: 100%;
+  width: auto;
   height: 2.5rem;
+  margin-top: 20%;
 }
 
 footer p {
   color: #ccc;
 }
-.note {
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
-  padding: 10px;
-  width: 240px;
-  margin: 16px;
-  float: left;
-}
-.note h1 {
-  font-size: 1.1em;
-  margin-bottom: 6px;
-}
-.note p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-.note button {
-  position: relative;
-  float: right;
-  margin-right: 10px;
-  color: #f5ba13;
-  border: none;
-  height: 36px;
-  cursor: pointer;
-  outline: none;
-}
 
 form {
   position: relative;
-  width: 480px;
+  width: 80%;
   margin: 30px auto 20px auto;
-  background: #fff;
+  /* background: #fff; */
   padding: 15px;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
 form input,
 form textarea {
+  background: none;
   width: 100%;
   border: none;
   padding: 4px;
@@ -99,3 +83,4 @@ form button {
   cursor: pointer;
   outline: none;
 }
+
