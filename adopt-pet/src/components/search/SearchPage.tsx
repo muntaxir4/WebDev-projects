@@ -33,7 +33,7 @@ function SearchPage() {
     <div className="flex md:flex-row flex-col ">
         <div className="m-2 p-3 md:ml-8 rounded-md border-black border md:w-72 flex-initial flex-shrink-0 md:self-start backdrop-opacity-40">
           <form className="m-2" onSubmit={handleSearch}>
-            <div className="sm:col-span-3 m-2">
+            <div className=" m-2">
               <label
                 htmlFor="location"
                 className="block text-sm font-medium leading-6 text-gray-90 "
@@ -47,7 +47,7 @@ function SearchPage() {
                   value={location}
                   disabled={true}
                   onChange={(e) => setLocation(e.target.value)}
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 >
                 </select>
               </div>
@@ -65,7 +65,7 @@ function SearchPage() {
                   name="animal"
                   value={animal}
                   onChange={(e) => {setAnimal(e.target.value); setBreed("Select")}}
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600  sm:text-sm sm:leading-6"
                 >
                   <option value="">Select</option>
                   {animals.map((animal, ind) => (
@@ -90,7 +90,7 @@ function SearchPage() {
                   value={breed}
                   onChange={(e) => setBreed(e.target.value)}
                   disabled={!breeds.length}
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600  sm:text-sm sm:leading-6"
                 >
                   <option value="">Select</option>
                   {breeds.map((breed, ind) => (
@@ -107,7 +107,7 @@ function SearchPage() {
             </div>
           </form>
         </div>  
-        <div className="flex-auto m-2">
+        <div className="flex-auto m-2 mt-0">
           {search ? 
           <SearchResults search={search} /> :
           <h2 className="text-center">Results will appear here.</h2>}
